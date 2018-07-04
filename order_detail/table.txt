@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS `mk_order_detail`;
+CREATE TABLE IF NOT EXISTS `mk_order_detail` (
+  `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT 'รหัส',
+  `food_id` int(11) COLLATE utf8_bin NOT NULL COMMENT 'รหัสอาหารที่สั่ง',
+  `order_id` int(11) COLLATE utf8_bin NOT NULL COMMENT 'รหัสของตารางใหญ่',
+  `qty` int(11) COLLATE utf8_bin NOT NULL COMMENT 'จำนวนที่สั่ง',
+  `status` varchar(30) COLLATE utf8_bin NOT NULL COMMENT 'status',
+   `insert_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'เวลาที่เพิ่มข้อมูล'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;

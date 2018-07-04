@@ -1,0 +1,10 @@
+DROP TABLE IF EXISTS `food`;
+CREATE TABLE IF NOT EXISTS `food` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'รหัสอาหาร',
+  `name` varchar(30) COLLATE utf8_bin NOT NULL COMMENT 'ชื่อ',
+  `description` text COLLATE utf8_bin NOT NULL COMMENT 'คำอธิบาย',
+  `price` double COLLATE utf8_bin NOT NULL COMMENT 'ราคา',
+  `image` varchar(50) COLLATE utf8_bin NOT NULL COMMENT 'path ไปยังรูป',
+  `cat_id` int(11) COLLATE utf8_bin NOT NULL COMMENT 'รหัสประเภทอาหาร',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=1 ;
